@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="New task" required>
+            <input type="date" id="deadline-input" required>
+            <select id="priority-input">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <select id="label-input">
+                <option value="development">Development</option>
+                <option value="enjoyment">Enjoyment</option>
+                <option value="others">others</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        <div id="progress-container">
+            <label>Progress:</label>
+            <progress id="task-progress" value="0" max="100"></progress>
+            <span id="progress-percentage">0%</span>
+        </div>
+        <div id="task-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
